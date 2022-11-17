@@ -16,6 +16,14 @@ struct sosFantaApp: App {
     }
 }
 
+/*
+ Func that splits array into chunks.
+ How to split? Use this:
+ 
+    let squadreRow = SquadreModel().squadreArray.chunked(into: 4)
+
+ */
+
 extension Array {
     func chunked(into size: Int) -> [[Element]] {
         return stride(from: 0, to: count, by: size).map {

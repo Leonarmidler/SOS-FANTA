@@ -15,22 +15,25 @@ struct SquadreView: View {
         
         NavigationView {
             
-            VStack{
-                ForEach (squadreRow, id: \.self) { squadre in
-                    HStack{
-                        ForEach (squadre, id: \.self) { squadra in
-                            NavigationLink {
+            ScrollView{
+                VStack{
+                    ForEach (squadreRow, id: \.self) { squadre in
+                        HStack{
+                            ForEach (squadre, id: \.self) { squadra in
+                                NavigationLink {
+                                    
+                                } label: {
+                                    Image(squadra)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 55, height: 55)
+                                }
+                                .padding(16)
                                 
-                            } label: {
-                                Image(squadra)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 55, height: 55)
                             }
-                            .padding(16)
-                            
                         }
                     }
+                    Spacer()
                 }
             }
             .navigationBarTitle("Squadre")
