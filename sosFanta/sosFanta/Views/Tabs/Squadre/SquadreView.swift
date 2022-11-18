@@ -21,7 +21,7 @@ struct SquadreView: View {
                         HStack{
                             ForEach (squadre, id: \.self) { squadra in
                                 NavigationLink {
-                                    
+                                    //INSERT VIEW HERE
                                 } label: {
                                     Image(squadra)
                                         .resizable()

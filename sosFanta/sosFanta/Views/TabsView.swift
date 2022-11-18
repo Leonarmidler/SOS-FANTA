@@ -30,7 +30,7 @@ struct TabsView: View {
                         .renderingMode(.template)
                         .padding(16)
                     Text("Squadre")
-                }
+               }
             SettingsView()
                 .tabItem{
                     Image("Impostazioni")

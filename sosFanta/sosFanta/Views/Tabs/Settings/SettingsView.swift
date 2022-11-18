@@ -8,8 +8,34 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
+    @State private var isOn = false
+    
     var body: some View {
-        Text("SETTINGS COMING SOON")
+        NavigationView {
+            //ScrollView{
+                VStack(alignment: .leading){
+                    
+                    Text("Notifiche")
+                        .font(.title)
+                    Toggle("Notifiche Push:", isOn: $isOn)
+                        .toggleStyle(SwitchToggleStyle(tint: .red))
+                    
+                    Divider()
+                    
+                    Spacer()
+                    HStack{
+                        Spacer()
+                        Text("MORE SOON")
+                            .font(.largeTitle)
+                        Spacer()
+                    }
+                    Spacer()
+                }
+            //}
+            .padding()
+            .navigationTitle("Impostazioni")
+        }
     }
 }
 
