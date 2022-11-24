@@ -5,7 +5,7 @@
 //  Created by Leonardo Daniele on 15/11/22.
 //
 
-import Foundation
+import SwiftUI
 
 struct ArticleModel: Identifiable {
     
